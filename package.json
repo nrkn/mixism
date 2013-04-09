@@ -1,0 +1,37 @@
+{
+  "name": "mixism",
+  "version": "0.1.0",
+  "description": "underscore mixins via interfascist",
+  "homepage": "http://github.com/nrkn/mixism",
+  "bugs": {
+    "url": "http://github.com/nrkn/mixism/issues",
+    "email": "nrkn.com@gmail.com"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/nrkn/mixism.git"
+  },
+  "keywords": [
+    "mixins",
+    "extensions",
+    "extension methods",
+    "interfascist",
+    "underscore",
+    "interface",
+    "interfaces",
+    "npm",
+    "javascript",
+    "json"
+  ],
+  "dependencies": {
+    "underscore": "~1.4.4",
+    "interfascist": "~0.9.1"
+  },
+  "author": {
+    "name": "Nik Coughlin",
+    "email": "nrkn.com@gmail.com",
+    "url": "http://nrkn.com"
+  },
+  "license": "MIT"  
+}
