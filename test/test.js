@@ -30,6 +30,12 @@ describe( 'mixism', function(){
           x: point.x * point.x,
           y: point.y * point.y 
         };
+      },
+      squareAdd: function( point, value ) {
+        return {
+          x: point.x * point.x + value,
+          y: point.y * point.y + value
+        };
       }
     },
     Line: {
@@ -67,23 +73,27 @@ describe( 'mixism', function(){
     height: 3.5
   };
   
-  describe( 'simple extension', function() {
+  describe( 'simple extension', function() {    
     it( 'should extend the Point interface', function(){
       var sqP = _( p ).square();
       assert( sqP.x === 25 && sqP.y === 12.25 );
-    });    
+    });
+    it( 'should extend the Point interface with args', function(){
+      var sqP = _( p ).squareAdd( 2 );
+      assert( sqP.x === 27 && sqP.y === 14.25 );
+    });      
     it( 'should extend the Line interface', function(){
       var sqL = _( l ).square();
       assert( sqL.start.x === 25 && sqL.start.y === 12.25 && sqL.end.x === 4 && sqL.end.y === 1 );
-    });     
-    it( 'should extend a Number', function(){
-      var sq = _( 5 ).square();
-      assert( sq === 25 );
     });    
     it( 'should not extend the Size interface', function(){
       assert.throws( function(){
         var sqS = _( s ).square();
       } );    
     });
+    it( 'should extend a Number', function(){
+      var sq = _( 5 ).square();
+      assert( sq === 25 );
+    });    
   });  
 });

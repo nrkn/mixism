@@ -17,7 +17,7 @@ var _ = require( 'underscore' );
   };
   Mixism.FunctionNotFoundError.prototype = new Error();  
   
-  Mixism.prototype.mixin = function( mixins ) {
+  Mixism.prototype.mixin = function( mixins ) {    
     var self = this;
     var underscoreMixins = {};
     _( mixins ).each( function( functions, interfaceName ) {
@@ -31,14 +31,14 @@ var _ = require( 'underscore' );
         self.funcs[ name ][ interfaceName ] = func;
       });
     });  
-    _.mixin( underscoreMixins );    
+    _.mixin( underscoreMixins );
   };
   
   Mixism.prototype.resolve = function( name, args ) {
     var self = this;
     var func = _( self.funcs[ name ] ).find( function( func, interfaceName ) {
       return self.interfaces.validate( args[ 0 ], interfaceName );
-    });  
+    }); 
     if( _( func ).isUndefined() ) {
       throw new Mixism.FunctionNotFoundError( name );
     }    
