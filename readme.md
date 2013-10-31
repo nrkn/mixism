@@ -1,3 +1,5 @@
+# HEY don't use this yet - it doesn't pass tests and isn't in NPM - in progress
+
 # mixism
 
 underscore mixins via interfascist
