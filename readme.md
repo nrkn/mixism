@@ -91,6 +91,14 @@ line squared: Line(Point(25,12.25),Point(5.289999999999999,1))
 
 Lets you apply your mixins only to the appropriate objects. 
 
+## Tests
+
+Run with mocha from the root of mixism
+
+```
+npm install -g mocha
+mocha
+
 ## License
 
 MIT
