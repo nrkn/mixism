@@ -98,6 +98,7 @@ Run with mocha from the root of mixism
 ```
 npm install -g mocha
 mocha
+```
 
 ## License
 
