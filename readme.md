@@ -1,5 +1,3 @@
-# HEY don't use this yet - it doesn't pass tests and isn't in NPM - in progress
-
 # mixism
 
 underscore mixins via interfascist
@@ -91,7 +89,7 @@ line squared: Line(Point(25,12.25),Point(5.289999999999999,1))
 
 ## Why
 
-Just because, OK. [TODO]
+Lets you apply your mixins only to the appropriate objects. 
 
 ## License
 

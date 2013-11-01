@@ -1,11 +1,10 @@
 var _ = require( 'underscore' );
-
 (function(){
   'use strict';
   
   //optionally allow underscore to be passed through
-  function Mixism( interfaces, underscore ) {
-    this.interfaces = interfaces;
+  function Mixism( validator, underscore ) {
+    this.validator = validator;
     this.underscore = underscore || _;
     //this stores the funcs by function name and then by interface name
     this.funcs = {};
@@ -37,7 +36,7 @@ var _ = require( 'underscore' );
   Mixism.prototype.resolve = function( name, args ) {
     var self = this;
     var func = _( self.funcs[ name ] ).find( function( func, interfaceName ) {
-      return self.interfaces.validate( args[ 0 ], interfaceName );
+      return self.validator.validate( args[ 0 ], interfaceName );
     }); 
     if( _( func ).isUndefined() ) {
       throw new Mixism.FunctionNotFoundError( name );
